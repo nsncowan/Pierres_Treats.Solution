@@ -5,5 +5,6 @@ namespace Storefront.Models
     public int TreatId { get; set; }
     public string Name { get; set; }
     public List<FlavorTreat> FlavorTreatJoinEntities { get; }
+    public ApplicationUser User { get; set; }
   }
 }
