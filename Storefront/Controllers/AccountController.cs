@@ -32,7 +32,7 @@ public class AccountController : Controller
     {
       if (!ModelState.IsValid)
       {
-        return View(model)
+        return View(model);
       }
       else
       {
@@ -44,7 +44,7 @@ public class AccountController : Controller
         }
         else
         {
-          foreach (IndentityError error in result.Errors)
+          foreach (IdentityError error in result.Errors)
           {
             ModelState.AddModelError("", error.Description);
           }
