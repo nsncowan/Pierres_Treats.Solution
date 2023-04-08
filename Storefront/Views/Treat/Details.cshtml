@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Storefront.Models
+@model Storefront.Models.Treat
+
+<h2>Treat Details</h2>
+
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+@if(Model.FlavorTreatJoinEntities.Count == 0)
+{
+  <h3>You haven't made flavors for this treat yet!</h3>
+}
+else
+{
+  <h3>This treat comes in the following flavors:</h3>
+  <ul>
+    @foreach(FlavorTreat flavorTreat in Model.FlavorTreatJoinEntities)
+    {
+      <li>@flavorTreat.Flavor.Name</li>
+    }
+  </ul>
+}
+<p><a href="#" class="link-secondary">@Html.ActionLink("Add a flavor to make this treat in", "AddFlavor", new {id = Model.TreatId})</a></p>
+<p><a href="#" class="link-secondary">@Html.ActionLink("Edit treat information", "Edit", new {id= Model.TreatId})</a></p>
+<p><a href="#" class="link-secondary">@Html.ActionLink("Delete treat", "Delete", new {id = Model.TreatId})</a></p>
