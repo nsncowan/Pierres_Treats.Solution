@@ -34,11 +34,7 @@ public class FlavorController : Controller
     _db.SaveChanges();
     return RedirectToAction("Index", "Home");
   }
-  
-  
-  
-  
-  
+
   public ActionResult Index()
   {
     List<Flavor> model = _db.Flavors
