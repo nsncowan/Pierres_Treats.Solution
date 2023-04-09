@@ -6,8 +6,13 @@ namespace Storefront.ViewModels
   {
     [Required]
     [EmailAddress]
-    [Display(Name = "Email Address")]
+    [Display(Name = "Email Address: ")]
     public string Email { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    [Display(Name = "User Name: ")]
+    public string UserName { get; set; }
 
     [Required]
     [DataType(DataType.Password)]
@@ -15,7 +20,7 @@ namespace Storefront.ViewModels
 
     [Required]
     [DataType(DataType.Password)]
-    [Display(Name = "Confirm password")]
+    [Display(Name = "Confirm password: ")]
     [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
     public string ConfirmPassword { get; set; }
   }

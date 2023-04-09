@@ -25,15 +25,15 @@ namespace Storefront
       builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<StorefrontContext>()
                 .AddDefaultTokenProviders();
-      // builder.Services.Configure<IdentityOptions>(options =>
-      // {
-      //   options.Password.RequireDigit = false;
-      //   options.Password.RequireLowercase = false;
-      //   options.Password.RequireNonAlphanumeric = false;
-      //   options.Password.RequireUppercase = false;
-      //   options.Password.RequiredLength = 0;
-      //   options.Password.RequiredUniqueChars = 0;
-      // });
+      builder.Services.Configure<IdentityOptions>(options =>
+      {
+        options.Password.RequireDigit = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequiredLength = 0;
+        options.Password.RequiredUniqueChars = 0;
+      });
 
       WebApplication app = builder.Build();
 
