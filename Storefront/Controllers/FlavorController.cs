@@ -36,7 +36,8 @@ public class FlavorController : Controller
     _db.SaveChanges();
     return RedirectToAction("Index", "Home");
   }
-
+  
+  [AllowAnonymous]
   public ActionResult Index()
   {
     List<Flavor> model = _db.Flavors
@@ -45,6 +46,7 @@ public class FlavorController : Controller
     return View(model);
   }
 
+  [AllowAnonymous]
   public ActionResult Details(int id)
   {
     Flavor thisFlavor = _db.Flavors

@@ -36,7 +36,8 @@ public class TreatController : Controller
     _db.SaveChanges();
     return RedirectToAction("Index", "Home");
   }
-  
+
+  [AllowAnonymous]
   public ActionResult Index()
   {
     List<Treat> model = _db.Treats
@@ -44,7 +45,8 @@ public class TreatController : Controller
                                   .ToList();
     return View(model);
   }
-
+  
+  [AllowAnonymous]
   public ActionResult Details(int id)
   {
     Treat thisTreat = _db.Treats
