@@ -12,15 +12,6 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { required="required"})
 
-      <label for="flavorId">Flavor ID: </label>
-      <input list="flavors" name="flavor" id="flavorId">
-      <span id='name-field'></span>
-      <datalist id="flavors"> 
-    @foreach (Flavor flavor in ViewBag.FlavorList)
-    {
-                <option value=@flavor.FlavorId>@flavor.Name</option>
-    }
-      </datalist>
       <input type="submit" value="Add new Treat" class="btn btn-primary" />
 }
 
