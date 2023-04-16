@@ -17,6 +17,6 @@
 }
 </ul>
 
-<p>@Html.ActionLink("Show all Flavors", "Index")</p>
-<p>@Html.ActionLink("Edit Flavor", "Edit", new {id = Model.FlavorId})</p>
-<p>@Html.ActionLink("Delete Flavor", "Delete", new {id = Model.FlavorId})</p>
+<p>@Html.ActionLink("Add a new treat to make in this flavor", "AddTreat", new {id = Model.FlavorId})</p>
+@Html.ActionLink("Back to List", "Index")<br>
+@Html.ActionLink("Delete Flavor", "Delete", new {id = Model.FlavorId})

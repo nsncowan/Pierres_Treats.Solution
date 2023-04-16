@@ -23,6 +23,6 @@ else
     }
   </ul>
 }
-<p><a href="#" class="link-secondary">@Html.ActionLink("Add a flavor to make this treat in", "AddFlavor", new {id = Model.TreatId})</a></p>
-<p><a href="#" class="link-secondary">@Html.ActionLink("Edit treat information", "Edit", new {id= Model.TreatId})</a></p>
-<p><a href="#" class="link-secondary">@Html.ActionLink("Delete treat", "Delete", new {id = Model.TreatId})</a></p>
+<p>@Html.ActionLink("Add a flavor to make this treat in", "AddFlavor", new {id = Model.TreatId})</p>
+@Html.ActionLink("Edit treat information", "Edit", new {id= Model.TreatId}) <br>
+@Html.ActionLink("Delete treat", "Delete", new {id = Model.TreatId})

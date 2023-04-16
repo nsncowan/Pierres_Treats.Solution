@@ -59,9 +59,6 @@ $ dotnet tool install -g dotnet-script
   "dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0"
 3. In the same directory, run the following command to install AspNetCore Identity:
   "dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 6.0.0"
-4. When you're you're ready to create the database, run the following two commands in the project directory:
-  "dotnet ef migrations add initial"
-  "dotnet ef database update"
 
 ### Execute the Program
 1. Open the terminal and navigate to the production directory titled Storefront.

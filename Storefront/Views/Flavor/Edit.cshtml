@@ -4,15 +4,15 @@
 
 @model Storefront.Models.Flavor
 
-<h2>Edit Flavor</h2>
+<h2>Edit Treat</h2>
 
-<h4>Edit this Flavor: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Editing: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.FlavorId)
 
-  @Html.LabelFor(model => model.Name, ": ")
+  @Html.LabelFor(model => model.Name, "new name : ")
   @Html.EditorFor(model => model.Name)
 
   <input type="submit" value="Save"/>

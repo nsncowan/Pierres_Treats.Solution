@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Storefront.Models.Treat
+@using Storefront.Models
+
+
+<h2>Add a flavor to @Html.DisplayFor(model => model.Name)</h2>
+<br>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.TreatId)
+
+    @Html.Label("Select flavor")
+    @Html.DropDownList("FlavorId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
